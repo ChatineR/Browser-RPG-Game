@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie-edge">
+  <link rel="stylesheet" href="test.css">
+  <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+  <script src="test.js"></script>
+</head>
+<body>
+  <h1 id="gameTitle">
+    Browser RPG Game
+  </h1>
+  <input type="text" id="characterName" placeholder="Name your character"></input>
+  <input type="button" id="submitNameButton" value="submit" onClick="getCharacterName()"></input>
+  <h2 id="writePlayerName"></h2>
+  <h2> Choose your class! </h2>
+
+  <div id="firstClassDiv" onclick="highlightClassBorder()">
+    <img src="classA.png">
+    <p> Thorian Knight </p>
+  </div>
+</body>
+</html>
