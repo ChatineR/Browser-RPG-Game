@@ -17,9 +17,33 @@
   <h2 id="writePlayerName"></h2>
   <h2> Choose your class! </h2>
 
-  <div id="firstClassDiv" onclick="highlightClassBorder()">
-    <img src="classA.png">
-    <p> Thorian Knight </p>
-  </div>
+<div id="classContainer">
+    <div class="classDivs" id="thorianKnight" onclick="highlightThorianKnighBorder()">
+        <img src="thorianKnight.png">
+        <p> Thorian Knight </p>
+        <span class="toolTipText">Humanoid entities blessed with energies from
+          <br> mana infused crystals, Thorian Knights are
+          <br> adaptive fighters that are comfortable
+          <br> in both close-quarters combat (sword and shield),
+          <br> and ranged combat (spell casting). </span>
+    </div>
+    <div class="classDivs" id="prismWalker" onclick="highlightprismWalkerBorder()">
+        <img src="prismWalker.png">
+        <p> Prism Walker </p>
+        <span class="toolTipText">Born from the dark plains of Azteroth,
+          <br> Prism Walkers are extremely powerful spell casters,
+          <br> capable of manipulating time and space (teleportation),
+          <br> and disintegrating their foes with destructive magic.</span>
+    </div>
+    <div class="classDivs" id="boneGuard" onclick="highlightBoneGuardBorder()">
+        <img src="boneGuard.png">
+        <p> Bone Guard </p>
+        <span class="toolTipText"> Comprised of multiple spirits that inhabit the armor
+          <br> of the fallen, Bone Guard are melee-focused warriors
+          <br> incapable of casting spells or using ranged weapons.
+          <br> In light of these shortcomings, however, Bone Guard
+          <br> inherit a permanent life-steal bonus of 5%.</span>
+    </div>
+</div>
 </body>
 </html>
