@@ -6,38 +6,46 @@
   <meta http-equiv="X-UA-Compatible" content="ie-edge">
   <link rel="stylesheet" href="test.css">
   <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Chakra+Petch" rel="stylesheet">
   <script src="test.js"></script>
 </head>
 <body>
   <h1 id="gameTitle">
-    Browser RPG Game
+    Dungeons of Terazek
   </h1>
   <input type="text" id="characterName" placeholder="Name your character"></input>
-  <input type="button" id="submitNameButton" value="submit" onClick="getCharacterName()"></input>
-  <h2 id="writePlayerName"></h2>
-  <h2> Choose your class! </h2>
+  <h2 id="chooseClassH2"> Choose your class! </h2>
 
 <div id="classContainer">
-    <div class="classDivs" id="thorianKnight" onclick="highlightThorianKnighBorder()">
+    <div class="classDivs">
+      <label>
+        <input type="radio" name="test" value="small" id="thorianKnight">
         <img src="thorianKnight.png">
         <p> Thorian Knight </p>
+      </label>
         <span class="toolTipText">Humanoid entities blessed with energies from
           <br> mana infused crystals, Thorian Knights are
           <br> adaptive fighters that are comfortable
           <br> in both close-quarters combat (sword and shield),
           <br> and ranged combat (spell casting). </span>
     </div>
-    <div class="classDivs" id="prismWalker" onclick="highlightprismWalkerBorder()">
+    <div class="classDivs">
+      <label>
+        <input type="radio" name="test" value="small" checked id="prismWalker">
         <img src="prismWalker.png">
         <p> Prism Walker </p>
-        <span class="toolTipText">Born from the dark plains of Azteroth,
+      </label>
+        <span class="toolTipText">Born from the dark plains of Khazoth,
           <br> Prism Walkers are extremely powerful spell casters,
           <br> capable of manipulating time and space (teleportation),
           <br> and disintegrating their foes with destructive magic.</span>
     </div>
-    <div class="classDivs" id="boneGuard" onclick="highlightBoneGuardBorder()">
+    <div class="classDivs">
+      <label>
+      <input type="radio" name="test" value="small" id="boneGuard">
         <img src="boneGuard.png">
         <p> Bone Guard </p>
+      </label>
         <span class="toolTipText"> Comprised of multiple spirits that inhabit the armor
           <br> of the fallen, Bone Guard are melee-focused warriors
           <br> incapable of casting spells or using ranged weapons.
@@ -45,5 +53,10 @@
           <br> inherit a permanent life-steal bonus of 5%.</span>
     </div>
 </div>
+
+<div class="breathingAnimation">
+<input type="button" id="submitNameButton" value="submit" onClick="getCharacterName()"></input>
+</div>
+<p id="writePlayerName"></p>
 </body>
 </html>

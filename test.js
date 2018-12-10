@@ -1,52 +1,25 @@
 
-var isSelected;
-
 function getCharacterName() {
   let name = document.getElementById('characterName');
   let greetPlayer = document.getElementById('writePlayerName');
+  let chosenClassString;
 
-  greetPlayer.innerHTML = "Hello, " + name.value + "!";
-}
-
-function highlightThorianKnighBorder() {
-  let thorianKnightBorder = document.getElementById('thorianKnight').style.borderColor;
-
-  if (thorianKnightBorder == "black") {
-    document.getElementById('thorianKnight').style.borderColor = "green";
-    isSelected = true;
-  } else {
-    document.getElementById('thorianKnight').style.borderColor = "black";
-    isSelected = false;
+  if (document.getElementById('thorianKnight').checked == true) {
+    chosenClassString = "Thorian Knight";
   }
-  console.log("Thorian Knight: " + isSelected);
-}
 
-function highlightprismWalkerBorder() {
-  let prismWalkerBorder = document.getElementById('prismWalker').style.borderColor;
-
-  if (prismWalkerBorder == "black") {
-    document.getElementById('prismWalker').style.borderColor = "green";
-    isSelected = true;
-  } else {
-    document.getElementById('prismWalker').style.borderColor = "black";
-    isSelected = false;
+  if (document.getElementById('prismWalker').checked == true) {
+    chosenClassString = "Prism Walker";
   }
-  console.log("Prism Walker: " + isSelected);
-}
 
-function highlightBoneGuardBorder() {
-  let boneGuardBorder = document.getElementById('boneGuard').style.borderColor;
-
-  if (boneGuardBorder == "black") {
-    document.getElementById('boneGuard').style.borderColor = "green";
-    isSelected = true;
-  } else {
-    document.getElementById('boneGuard').style.borderColor = "black";
-    isSelected = false;
+  if (document.getElementById('boneGuard').checked == true) {
+    chosenClassString = "Bone Guard";
   }
-  console.log("Bone Guard: " + isSelected);
-}
 
-if (isSelected = true) {
-
+  if (name.value == false) {
+    greetPlayer.innerHTML = "Please enter your character's name.";
+  } else if(name.value != " ") {
+    greetPlayer.innerHTML = "Ah, so your name is " + name.value + ", and your chosen <br> class is a " + chosenClassString;
+    name.value.color = "gold";
+  }
 }

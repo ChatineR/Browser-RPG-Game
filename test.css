@@ -1,5 +1,5 @@
 body {
-  background-image: url("https://images.pexels.com/photos/235985/pexels-photo-235985.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+  background-image: url("background.png");
   background-repeat: repeat;
 }
 
@@ -19,9 +19,8 @@ h2 {
   text-shadow: 2px 2px black;
 }
 
-#writePlayerName {
-  color: black;
-  text-shadow: 1.5px 1.5px grey;
+#chooseClassH2 {
+  margin-top: 175px;
 }
 
 #characterName {
@@ -37,6 +36,8 @@ h2 {
   border-bottom: 3px solid black;
   text-align: center;
   font-size: 1.3em;
+  color: gold;
+  text-shadow: 1px 1px black;
 }
 
 ::placeholder {
@@ -46,13 +47,13 @@ h2 {
 }
 
 #submitNameButton {
-  margin-top: 115px;
+  margin-top: 400px;
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100px;
-  height: 35px;
-  font-family: Courgette;
+  width: 200px;
+  height: 40px;
+  font-family: Chakra Petch;
   font-size: 1.1em;
   color: white;
   background-color: black;
@@ -61,11 +62,15 @@ h2 {
 
 #submitNameButton:hover {
   border-color: #00b300;
+  cursor: pointer;
 }
 
 #writePlayerName {
   text-align: center;
-  margin-top: 185px;
+  font-size: 26px;
+  margin-top: 315px;
+  color: white;
+  text-shadow: 2px 2px black;
 }
 
 #classContainer {
@@ -79,13 +84,16 @@ h2 {
 
 .classDivs {
   display: inline-block;
-  border: 5px solid black;
+  border: 5px dashed black;
   text-align: center;
   width: 190px;
   height: 220px;
   padding: 20px 10px 0px 10px;
   font-family: Courgette;
   font-size: 1.2em;
+  margin-left: 20px;
+  border-radius: 2%;
+  background-color: #EFCDB2;
 }
 
 .classDivs .toolTipText {
@@ -96,14 +104,11 @@ h2 {
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
-
-  /* Position the tooltip */
   position: absolute;
-  z-index: 1;
 }
 
 .classDivs:hover {
-  color: gold;
+  color: #1A6C1A;
   text shadow: 1.5px 1.5px black;
   cursor: pointer;
 }
@@ -114,4 +119,21 @@ h2 {
 
 .classDivs img:hover {
   transform: scale(1.2);
+}
+
+/* HIDE RADIO BUTTON*/
+[type=radio] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+label img:hover {
+  cursor: pointer;
+}
+
+/* CHECKED STYLES */
+[type=radio]:checked + img {
+  outline: 5px solid #1A6C1A;
 }
